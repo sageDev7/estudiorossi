@@ -1,0 +1,2055 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rossi & Asociados | Estudio Jurídico Integral</title>
+    <meta name="description" content="Estudio Jurídico Rossi & Asociados. Ab. María Celeste Rossi y Ab. María Bernarda Mc. Cormack. Ing. Luiggi, La Pampa.">
+    <meta property="og:image" content="https://i.imgur.com/5wlnNox.png">
+    <link rel="icon" href="./favicon.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-primary: #2e373b;
+            --color-gray: #d2d5d6;
+            --color-white: #ffffff;
+            --color-accent: #54674a;
+            --color-text: #4a4a4a;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--color-text);
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+        }
+
+        /* HEADER */
+        header {
+            background: var(--color-white);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--color-primary);
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span {
+            background: var(--color-white);
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            background: var(--color-white);
+            display: flex;
+            align-items: center;
+            padding: 140px 60px 80px;
+            position: relative;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 64px;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+            line-height: 1.1;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .hero-content {
+            max-width: 50%;
+            padding-right: 50px;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            color: var(--color-text);
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .hero-team {
+            margin-bottom: 40px;
+        }
+
+        .hero-team h3 {
+            font-size: 14px;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .hero-team p {
+            font-size: 16px;
+            color: var(--color-text);
+            margin-bottom: 8px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .hero-team p i {
+            color: var(--color-accent);
+            font-size: 18px;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 18px 40px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-primary {
+            background: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .btn-primary:hover {
+            background: #1e272b;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(46, 55, 59, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--color-primary);
+            color: var(--color-primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.pexels.com/photos/5668772/pexels-photo-5668772.jpeg?auto=compress&cs=tinysrgb&w=1200') center/cover no-repeat;
+            filter: grayscale(100%);
+            z-index: 0;
+        }
+
+        .hero-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(210, 213, 214, 0.3);
+            z-index: 1;
+        }
+
+        /* SERVICIOS */
+        .servicios {
+            padding: 120px 60px;
+            background: var(--color-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .servicios::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.pexels.com/photos/6077284/pexels-photo-6077284.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover no-repeat;
+            filter: grayscale(100%);
+            opacity: 0.08;
+            z-index: 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header h2 {
+            font-size: 48px;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: var(--color-text);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .servicios-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .servicio-card {
+            background: var(--color-white);
+            padding: 50px 40px;
+            border: 2px solid var(--color-gray);
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .servicio-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 0;
+            background: var(--color-accent);
+            transition: height 0.3s;
+        }
+
+        .servicio-card:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .servicio-card:hover::before {
+            height: 100%;
+        }
+
+        .servicio-icon {
+            font-size: 40px;
+            color: var(--color-accent);
+            margin-bottom: 25px;
+        }
+
+        .servicio-card h3 {
+            font-size: 22px;
+            color: var(--color-primary);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .servicio-card p {
+            font-size: 15px;
+            color: var(--color-text);
+            line-height: 1.7;
+        }
+
+        /* ABOUT */
+        .about {
+            padding: 120px 60px;
+            background: var(--color-gray);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.pexels.com/photos/8111769/pexels-photo-8111769.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover no-repeat;
+            filter: grayscale(100%);
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-content h2 {
+            font-size: 48px;
+            color: var(--color-primary);
+            margin-bottom: 30px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .about-content p {
+            font-size: 17px;
+            color: var(--color-text);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--color-accent);
+            color: var(--color-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        .feature-text h4 {
+            font-size: 16px;
+            color: var(--color-primary);
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .feature-text p {
+            font-size: 14px;
+            color: var(--color-text);
+            margin: 0;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100%;
+            height: 100%;
+            background: var(--color-accent);
+            z-index: 0;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            position: relative;
+            z-index: 1;
+            filter: grayscale(100%);
+        }
+
+        /* ESTADÍSTICAS */
+        .estadisticas {
+            padding: 80px 60px;
+            background: var(--color-primary);
+        }
+
+        .estadisticas-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 60px;
+        }
+
+        .estadistica-item {
+            text-align: center;
+        }
+
+        .estadistica-numero {
+            font-size: 64px;
+            font-weight: 800;
+            color: var(--color-white);
+            line-height: 1;
+            margin-bottom: 15px;
+            letter-spacing: -2px;
+        }
+
+        .estadistica-label {
+            font-size: 15px;
+            color: rgba(255,255,255,0.9);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        /* CASOS DE ÉXITO */
+        .casos-exito {
+            padding: 120px 60px;
+            background: var(--color-gray);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .casos-exito::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.pexels.com/photos/6077368/pexels-photo-6077368.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover no-repeat;
+            filter: grayscale(100%);
+            opacity: 0.12;
+            z-index: 0;
+        }
+
+        .casos-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .casos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .caso-card {
+            background: var(--color-white);
+            padding: 45px 35px;
+            border: 2px solid var(--color-white);
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .caso-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .caso-numero {
+            font-size: 72px;
+            font-weight: 800;
+            color: var(--color-accent);
+            opacity: 0.15;
+            line-height: 1;
+            margin-bottom: 20px;
+            letter-spacing: -3px;
+        }
+
+        .caso-card h3 {
+            font-size: 22px;
+            color: var(--color-primary);
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .caso-detail {
+            margin-bottom: 20px;
+        }
+
+        .caso-detail h4 {
+            font-size: 13px;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .caso-detail p {
+            font-size: 14px;
+            color: var(--color-text);
+            line-height: 1.7;
+        }
+
+        .casos-cta {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        /* INSTAGRAM */
+        .instagram {
+            padding: 120px 60px;
+            background: var(--color-white);
+        }
+
+        .instagram-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+            margin-bottom: 50px;
+        }
+
+        .instagram-embed {
+            width: 100%;
+            min-height: 700px;
+            background: var(--color-gray);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .instagram-embed iframe {
+            width: 100%;
+            height: 700px;
+            border: none;
+        }
+
+        .instagram-cta {
+            text-align: center;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 120px 60px;
+            background: var(--color-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .faq::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover no-repeat;
+            filter: grayscale(100%);
+            opacity: 0.05;
+            z-index: 0;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .faq-list {
+            margin-top: 60px;
+        }
+
+        .faq-item {
+            border-bottom: 2px solid var(--color-gray);
+            margin-bottom: 0;
+        }
+
+        .faq-question {
+            padding: 30px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+            position: relative;
+        }
+
+        .faq-question:hover {
+            color: var(--color-accent);
+        }
+
+        .faq-question h3 {
+            font-size: 20px;
+            color: var(--color-primary);
+            font-weight: 600;
+            margin: 0;
+            transition: color 0.3s;
+            text-align: center;
+        }
+
+        .faq-question:hover h3 {
+            color: var(--color-accent);
+        }
+
+        .faq-question i {
+            font-size: 18px;
+            color: var(--color-accent);
+            transition: transform 0.3s;
+            position: absolute;
+            right: 0;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding-bottom: 30px;
+        }
+
+        .faq-answer p {
+            font-size: 16px;
+            color: var(--color-text);
+            line-height: 1.8;
+            margin: 0;
+            text-align: center;
+        }
+
+        /* SELECT STYLES */
+        .form-group select {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(255,255,255,0.08);
+            border: 2px solid rgba(255,255,255,0.2);
+            color: var(--color-white);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .form-group select option {
+            background: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .form-group select:focus {
+            outline: none;
+            background: rgba(255,255,255,0.12);
+            border-color: var(--color-accent);
+        }
+
+        /* TESTIMONIOS */
+        .testimonios {
+            padding: 120px 60px;
+            background: var(--color-white);
+        }
+
+        .testimonios-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonios-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .testimonio-card {
+            background: var(--color-white);
+            padding: 45px 35px;
+            border: 2px solid var(--color-gray);
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .testimonio-card:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .testimonio-icon {
+            font-size: 32px;
+            color: var(--color-accent);
+            margin-bottom: 20px;
+            opacity: 0.3;
+        }
+
+        .testimonio-text {
+            font-size: 16px;
+            color: var(--color-text);
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .testimonio-author h4 {
+            font-size: 18px;
+            color: var(--color-primary);
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .testimonio-author p {
+            font-size: 14px;
+            color: var(--color-accent);
+            margin-bottom: 15px;
+        }
+
+        .testimonio-rating {
+            color: #ffd700;
+            font-size: 14px;
+        }
+
+        /* CONTACTO */
+        .contacto {
+            padding: 120px 60px;
+            background: var(--color-primary);
+            color: var(--color-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contacto::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.pexels.com/photos/6077368/pexels-photo-6077368.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover no-repeat;
+            filter: grayscale(100%);
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .contacto-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contacto-content h2 {
+            font-size: 48px;
+            color: var(--color-white);
+            margin-bottom: 30px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .contacto-content p {
+            font-size: 17px;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-item {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--color-accent);
+            color: var(--color-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .info-text h4 {
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .info-text p,
+        .info-text a {
+            color: var(--color-white);
+            text-decoration: none;
+            font-size: 16px;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .info-text a:hover {
+            color: var(--color-accent);
+        }
+
+        .contacto-form {
+            background: rgba(255,255,255,0.05);
+            padding: 50px;
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--color-white);
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(255,255,255,0.08);
+            border: 2px solid rgba(255,255,255,0.2);
+            color: var(--color-white);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            background: rgba(255,255,255,0.12);
+            border-color: var(--color-accent);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 18px;
+            background: var(--color-accent);
+            color: var(--color-white);
+            border: none;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .form-submit:hover {
+            background: #445a3c;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(84, 103, 74, 0.4);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1e272b;
+            color: rgba(255,255,255,0.8);
+            padding: 80px 60px 40px;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto 50px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+        }
+
+        .footer-logo img {
+            height: 80px;
+            margin-bottom: 25px;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-about p {
+            line-height: 1.8;
+            margin-bottom: 25px;
+            color: rgba(255,255,255,0.7);
+            font-size: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.1);
+            color: var(--color-white);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 18px;
+        }
+
+        .social-link:hover {
+            background: var(--color-accent);
+            transform: translateY(-3px);
+        }
+
+        .footer-links h4 {
+            color: var(--color-white);
+            font-size: 18px;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            font-size: 15px;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-white);
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+            font-size: 14px;
+        }
+
+        .footer-bottom a {
+            color: var(--color-white);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+
+        /* WHATSAPP */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 65px;
+            height: 65px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            background: #20ba5a;
+            transform: scale(1.1);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 968px) {
+            nav {
+                padding: 20px 30px;
+                position: relative;
+                justify-content: center;
+            }
+
+            .logo {
+                margin: 0;
+            }
+
+            .logo img {
+                height: 50px;
+            }
+
+            .hamburger {
+                position: absolute;
+                right: 30px;
+                z-index: 1001;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100vh;
+                width: 100%;
+                max-width: 400px;
+                background: var(--color-primary);
+                flex-direction: column;
+                justify-content: center;
+                padding: 40px;
+                transition: right 0.4s;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links a {
+                font-size: 18px;
+                color: var(--color-white);
+            }
+
+            .hero::before {
+                display: none;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 50px;
+                text-align: center;
+            }
+
+            .hero-content {
+                max-width: 100%;
+                padding-right: 0;
+            }
+
+            .hero-content h1 {
+                font-size: 42px;
+            }
+
+            .hero-team p {
+                justify-content: center;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                text-align: center;
+                justify-content: center;
+            }
+
+            .hero {
+                flex-direction: column;
+                padding: 190px 0 0;
+            }
+
+            .hero-container {
+                order: 1;
+                padding: 0 30px 60px;
+            }
+
+            .hero-image {
+                position: relative;
+                width: 100vw;
+                min-height: 400px;
+                order: 2;
+                margin-top: 50px;
+                margin-left: calc(-50vw + 50%);
+            }
+
+            .servicios,
+            .about,
+            .contacto {
+                padding: 80px 30px;
+            }
+
+            .section-header h2 {
+                font-size: 36px;
+            }
+
+            .servicios-grid,
+            .about-features,
+            .testimonios-grid,
+            .casos-grid,
+            .instagram-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                justify-items: center;
+            }
+
+            .servicio-card {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* Centra elementos si usaras flex */
+                justify-content: center;
+            }
+
+            /* Para asegurar que el icono no tenga márgenes extraños */
+            .servicio-icon {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .caso-card {
+                max-width: 500px;
+                width: 100%;
+            }
+
+            .estadisticas-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+
+            .estadistica-numero {
+                font-size: 48px;
+            }
+
+            .about-container,
+            .contacto-container {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .about-content,
+            .contacto-content {
+                text-align: center;
+            }
+
+            .about-features {
+                justify-items: center;
+            }
+
+            .feature-item {
+                max-width: 300px;
+            }
+
+            .about-image::before {
+                display: none;
+            }
+
+            .about-image img {
+                height: 400px;
+            }
+
+            .info-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .contacto-form {
+                padding: 40px 30px;
+            }
+
+            .form-group label,
+            .form-group input,
+            .form-group textarea,
+            .form-group select,
+            .form-group input::placeholder,
+            .form-group textarea::placeholder {
+                text-align: center;
+            }
+
+            .form-group select {
+                text-align-last: center;
+            }
+
+            .form-group select option {
+                text-align: left;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .footer-logo {
+                display: flex;
+                justify-content: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+
+        /* TABLET - 768px */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 190px 30px 0;
+            }
+
+            .hero-content h1 {
+                font-size: 38px;
+            }
+
+            .hero-content {
+                padding-right: 0;
+            }
+
+            .section-header h2 {
+                font-size: 32px;
+            }
+
+            .servicios,
+            .about,
+            .estadisticas,
+            .casos-exito,
+            .instagram,
+            .testimonios,
+            .faq,
+            .contacto {
+                padding: 80px 30px;
+            }
+
+            .estadisticas-container {
+                gap: 30px;
+            }
+
+            .estadistica-numero {
+                font-size: 42px;
+            }
+
+            .caso-card,
+            .testimonio-card,
+            .servicio-card {
+                padding: 35px 25px;
+
+            }
+
+            .contacto-form {
+                padding: 35px 25px;
+            }
+
+            .btn {
+                padding: 16px 35px;
+                font-size: 12px;
+            }
+
+            footer {
+                padding: 60px 30px 30px;
+            }
+        }
+
+        /* MOBILE SMALL - 576px */
+        @media (max-width: 576px) {
+
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .hero-team h3 {
+                font-size: 17px;
+            }
+
+            .hero-team p {
+                font-size: 15px;
+            }
+
+            .section-header h2 {
+                font-size: 28px;
+            }
+
+            .section-header p {
+                font-size: 15px;
+            }
+
+            .servicios,
+            .about,
+            .estadisticas,
+            .casos-exito,
+            .instagram,
+            .testimonios,
+            .faq,
+            .contacto {
+                padding: 60px 20px;
+            }
+
+            .estadisticas-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .estadistica-numero {
+                font-size: 48px;
+            }
+
+            .servicio-card h3,
+            .caso-card h3,
+            .testimonio-author h4 {
+                font-size: 18px;
+            }
+
+            .caso-numero {
+                font-size: 60px;
+            }
+
+            .contacto-content h2,
+            .about-content h2 {
+                font-size: 32px;
+            }
+
+            .contacto-form h3 {
+                font-size: 24px;
+            }
+
+            .form-group label {
+                font-size: 11px;
+            }
+
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                padding: 14px 16px;
+                font-size: 14px;
+            }
+
+            .form-submit {
+                padding: 16px;
+                font-size: 12px;
+            }
+
+            .btn {
+                padding: 14px 30px;
+                font-size: 14px;
+            }
+
+            .faq-question h3 {
+                font-size: 16px;
+            }
+
+            .faq-answer p {
+                font-size: 14px;
+            }
+
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 28px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .footer-logo img {
+                height: 60px;
+            }
+
+            .instagram-embed iframe {
+                height: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./logo.png" alt="Rossi & Asociados">
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+        <div class="hero-image"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>ROSSI &<br>ASOCIADOS</h1>
+                <p class="hero-subtitle">ESTUDIO JURÍDICO INTEGRAL</p>
+                <div class="hero-team">
+                    <h3>Nuestro Equipo</h3>
+                    <p><i class="fas fa-user-tie"></i> Ab. María Celeste Rossi</p>
+                    <p><i class="fas fa-user-tie"></i> Ab. María Bernarda Mc. Cormack</p>
+                </div>
+                <div class="hero-cta">
+                    <a href="#contacto" class="btn btn-primary">
+                        <i class="fas fa-gavel"></i>
+                        Consultá Ahora
+                    </a>
+                    <a href="#servicios" class="btn btn-outline">
+                        Nuestros Servicios
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="servicios" id="servicios">
+        <div class="section-header">
+            <h2>Áreas de Práctica</h2>
+            <p>Asesoramiento legal integral en diversas áreas del derecho</p>
+        </div>
+        <div class="servicios-grid">
+            <div class="servicio-card">
+                <div class="servicio-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Derecho de Familia</h3>
+                <p>Cuota alimentaria, divorcios, régimen de visitas y cuidado personal.</p>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-icon">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <h3>Derecho Sucesorio</h3>
+                <p>Sucesiones, testamentos y división de herencias.</p>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-icon">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                </div>
+                <h3>Jubilaciones y Pensiones</h3>
+                <p>Trámites jubilatorios y gestión de aportes.</p>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-icon">
+                    <i class="fas fa-piggy-bank"></i>
+                </div>
+                <h3>Planes de Ahorro</h3>
+                <p>Asesoramiento en planes de ahorro e inversiones.</p>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3>Compensación Económica</h3>
+                <p>Nuevo instituto incorporado en derecho de familia.</p>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <h3>Denuncias</h3>
+                <p>Asesoramiento y patrocinio en denuncias legales.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="nosotros">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>Experiencia y Compromiso</h2>
+                <p>En nuestro estudio jurídico brindamos asesoramiento legal integral con un enfoque personalizado y profesional. Nuestro equipo está formado por profesionales comprometidas con la defensa de tus derechos.</p>
+                <p>Trabajamos con dedicación para proteger los intereses de nuestros clientes, ofreciendo soluciones efectivas y estratégicas en cada caso.</p>
+                <div class="about-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Profesionalismo</h4>
+                            <p>Atención de calidad</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Compromiso</h4>
+                            <p>Con cada cliente</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Disponibilidad</h4>
+                            <p>Lun a Vie 9-17hs</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Cercanía</h4>
+                            <p>En Ing. Luiggi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Estudio Jurídico">
+            </div>
+        </div>
+    </section>
+
+    <!-- ESTADÍSTICAS -->
+    <section class="estadisticas">
+        <div class="estadisticas-container">
+            <div class="estadistica-item">
+                <div class="estadistica-numero">5+</div>
+                <p class="estadistica-label">Años de Experiencia</p>
+            </div>
+            <div class="estadistica-item">
+                <div class="estadistica-numero">500+</div>
+                <p class="estadistica-label">Casos Resueltos</p>
+            </div>
+            <div class="estadistica-item">
+                <div class="estadistica-numero">95%</div>
+                <p class="estadistica-label">Clientes Satisfechos</p>
+            </div>
+            <div class="estadistica-item">
+                <div class="estadistica-numero">100%</div>
+                <p class="estadistica-label">Compromiso</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASOS DE ÉXITO -->
+    <section class="casos-exito">
+        <div class="casos-container">
+            <div class="section-header">
+                <h2>Casos de Éxito</h2>
+                <p>Resultados reales que transforman vidas</p>
+            </div>
+            <div class="casos-grid">
+                <div class="caso-card">
+                    <div class="caso-numero">01</div>
+                    <h3>Divorcio y Cuota Alimentaria</h3>
+                    <div class="caso-detail">
+                        <h4>Problema</h4>
+                        <p>Cliente con divorcio conflictivo y necesidad urgente de establecer cuota alimentaria para sus hijos.</p>
+                    </div>
+                    <div class="caso-detail">
+                        <h4>Solución</h4>
+                        <p>Mediación exitosa que logró acuerdo beneficioso para ambas partes sin llegar a juicio.</p>
+                    </div>
+                    <div class="caso-detail">
+                        <h4>Resultado</h4>
+                        <p>Acuerdo en 3 meses con cuota alimentaria justa y régimen de visitas establecido.</p>
+                    </div>
+                </div>
+
+                <div class="caso-card">
+                    <div class="caso-numero">02</div>
+                    <h3>Sucesión Familiar Compleja</h3>
+                    <div class="caso-detail">
+                        <h4>Problema</h4>
+                        <p>Herencia con múltiples herederos y bienes en diferentes provincias.</p>
+                    </div>
+                    <div class="caso-detail">
+                        <h4>Solución</h4>
+                        <p>Coordinación de trámites en distintas jurisdicciones y mediación entre herederos.</p>
+                    </div>
+                    <div class="caso-detail">
+                        <h4>Resultado</h4>
+                        <p>Sucesión finalizada en 8 meses con división equitativa de bienes.</p>
+                    </div>
+                </div>
+
+                <div class="caso-card">
+                    <div class="caso-numero">03</div>
+                    <h3>Jubilación Rechazada</h3>
+                    <div class="caso-detail">
+                        <h4>Problema</h4>
+                        <p>Cliente con trámite jubilatorio rechazado por falta de aportes reconocidos.</p>
+                    </div>
+                    <div class="caso-detail">
+                        <h4>Solución</h4>
+                        <p>Reconstrucción de historia laboral y presentación de recursos administrativos.</p>
+                    </div>
+                    <div class="caso-detail">
+                        <h4>Resultado</h4>
+                        <p>Jubilación otorgada con retroactivo de 6 meses.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="casos-cta">
+                <a href="#contacto" class="btn btn-primary">
+                    <i class="fas fa-gavel"></i>
+                    Consultá tu Caso
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section class="instagram">
+        <div class="instagram-container">
+            <div class="section-header">
+                <h2>Seguinos en Instagram</h2>
+                <p>Consejos legales y novedades del estudio</p>
+            </div>
+            <div class="instagram-grid">
+                <div class="instagram-embed">
+                    <iframe src="https://www.instagram.com/reel/C5lsNt5rVs-/embed" width="100%" height="700" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                </div>
+                <div class="instagram-embed">
+                    <iframe src="https://www.instagram.com/reel/DB9EmZ6RfZw/embed" width="100%" height="700" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                </div>
+                <div class="instagram-embed">
+                    <iframe src="https://www.instagram.com/reel/DEnDtYoxEa9/embed" width="100%" height="700" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                </div>
+            </div>
+            <div class="instagram-cta">
+                <a href="https://www.instagram.com/estudiorossiyasoc_/" target="_blank" class="btn btn-primary">
+                    @estudiorossiyasoc_
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="faq-container">
+            <div class="section-header">
+                <h2>Preguntas Frecuentes</h2>
+                <p>Respuestas a las consultas más comunes</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Cuánto cuesta una consulta?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>La primera consulta tiene un costo accesible que se descuenta del total de honorarios si decidís contratar nuestros servicios. Contactanos para más información.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Cuánto tiempo demora un trámite de divorcio?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>El tiempo varía según si es de mutuo acuerdo o contencioso. Un divorcio por mutuo acuerdo puede resolverse entre 2-4 meses, mientras que uno contencioso puede llevar entre 6-12 meses.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Qué documentos necesito para iniciar una sucesión?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Necesitarás: partida de defunción, DNI del fallecido, títulos de propiedad, extractos bancarios, y DNI de todos los herederos. Te asesoramos en cada paso del proceso.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Atienden casos fuera de Ing. Luiggi?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, atendemos casos en toda La Pampa y provincias vecinas. También ofrecemos consultas virtuales para mayor comodidad.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Puedo hacer consultas por WhatsApp?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, podés contactarnos por WhatsApp para consultas breves y coordinar reuniones. Para asesoramiento completo, recomendamos agendar una consulta presencial o virtual.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="testimonios">
+        <div class="testimonios-container">
+            <div class="section-header">
+                <h2>Lo Que Dicen Nuestros Clientes</h2>
+                <p>La confianza de quienes nos eligieron</p>
+            </div>
+            <div class="testimonios-grid">
+                <div class="testimonio-card">
+                    <div class="testimonio-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonio-text">"Excelente atención y profesionalismo. Me ayudaron en un momento muy difícil con mi divorcio y todo salió de la mejor manera. Súper recomendables."</p>
+                    <div class="testimonio-author">
+                        <h4>María G.</h4>
+                        <p>Derecho de Familia</p>
+                    </div>
+                    <div class="testimonio-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="testimonio-card">
+                    <div class="testimonio-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonio-text">"Me asesoraron en la sucesión de mi padre. Todo fue muy claro y transparente. Muy agradecido por su trabajo."</p>
+                    <div class="testimonio-author">
+                        <h4>Carlos R.</h4>
+                        <p>Derecho Sucesorio</p>
+                    </div>
+                    <div class="testimonio-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="testimonio-card">
+                    <div class="testimonio-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonio-text">"Profesionales comprometidas que se ocuparon de cada detalle. Me ayudaron con mi jubilación y estoy muy conforme con el resultado."</p>
+                    <div class="testimonio-author">
+                        <h4>Estela M.</h4>
+                        <p>Jubilaciones</p>
+                    </div>
+                    <div class="testimonio-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contacto" id="contacto">
+        <div class="contacto-container">
+            <div class="contacto-content">
+                <h2>Contacto</h2>
+                <p>Estamos aquí para ayudarte. Consultanos sin compromiso y encontraremos la mejor solución legal para tu caso.</p>
+                <ul class="info-list">
+                    <li class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Teléfono</h4>
+                            <a href="tel:+542302393919">+54 2302 39-3919</a>
+                        </div>
+                    </li>
+                    <li class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Ubicación</h4>
+                            <p>Belgrano 371, Ing. Luiggi<br>La Pampa, Argentina</p>
+                        </div>
+                    </li>
+                    <li class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Horarios</h4>
+                            <p>Lunes a Viernes<br>09:00 a 17:00 hs</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contacto-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Tu teléfono" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="area">Área de Consulta</label>
+                        <select id="area" name="area" required>
+                            <option value="">Seleccioná un área</option>
+                            <option value="familia">Derecho de Familia</option>
+                            <option value="sucesorio">Derecho Sucesorio</option>
+                            <option value="jubilaciones">Jubilaciones y Pensiones</option>
+                            <option value="ahorro">Planes de Ahorro</option>
+                            <option value="compensacion">Compensación Económica</option>
+                            <option value="denuncias">Denuncias</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="profesional">Preferencia de Profesional</label>
+                        <select id="profesional" name="profesional">
+                            <option value="">Sin preferencia</option>
+                            <option value="celeste">Ab. María Celeste Rossi</option>
+                            <option value="bernarda">Ab. María Bernarda Mc. Cormack</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Contanos brevemente tu consulta..." required></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">Enviar Consulta</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="./logo.png" alt="Rossi & Asociados">
+                </div>
+                <p>Estudio Jurídico Integral. Ab. María Celeste Rossi y Ab. María Bernarda Mc. Cormack. Profesionales comprometidas con la defensa de tus derechos.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/estudiorossiyasoc_/" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/542302393919" target="_blank" class="social-link">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Servicios</h4>
+                <ul>
+                    <li><a href="#servicios">Derecho de Familia</a></li>
+                    <li><a href="#servicios">Sucesiones</a></li>
+                    <li><a href="#servicios">Jubilaciones</a></li>
+                    <li><a href="#servicios">Planes de Ahorro</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Rossi & Asociados - Estudio Jurídico Integral - Todos los derechos reservados<br>Desarrollado por <a href="https://www.instagram.com/sageedev/" target="_blank">@sageeDev</a></p>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/542302393919?text=Hola, necesito asesoramiento legal" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // MENU TOGGLE
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // FAQ ACCORDION
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Cerrar todos los items
+                faqItems.forEach(i => i.classList.remove('active'));
+                
+                // Abrir el clickeado si no estaba activo
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // FORM SUBMIT
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const area = document.getElementById('area').options[document.getElementById('area').selectedIndex].text;
+            const profesional = document.getElementById('profesional').options[document.getElementById('profesional').selectedIndex].text;
+            const mensaje = document.getElementById('mensaje').value;
+            
+            let whatsappText = `Hola, mi nombre es ${nombre}.%0A%0AConsulta sobre: ${area}`;
+            if (profesional !== 'Sin preferencia') {
+                whatsappText += `%0AProfesional: ${profesional}`;
+            }
+            whatsappText += `%0A%0A${mensaje}`;
+            
+            const whatsappURL = `https://wa.me/542302393919?text=${whatsappText}`;
+            window.open(whatsappURL, '_blank');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
